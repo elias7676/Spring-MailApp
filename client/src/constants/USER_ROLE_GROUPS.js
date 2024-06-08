@@ -1,0 +1,27 @@
+export const USER_ROLE_GROUPS = [
+  { keys: ["AcademicCalendar"], label: "Academic Calendar Permissions" },
+  { keys: ["AcademicEvent"], label: "Academic Event Permissions" },
+  { keys: ["AcademicPeriod"], label: "Academic Period Permissions" },
+  { keys: ["Assessment"], label: "Assessment Permissions" },
+  { keys: ["Branch", "Department"], label: "Branch Permissions" },
+  { keys: ["BusRoute"], label: "Bus Routes Permissions" },
+  { keys: ["Course"], label: "Course Permissions" },
+  { keys: ["Employee"], label: "Employee Permissions" },
+  { keys: ["Enrollment"], label: "Enrollment Permissions" },
+  { keys: ["Grade"], label: "Grade Permissions" },
+  { keys: ["Homeroom"], label: "Home Room Permissions" },
+  { keys: ["Lesson"], label: "Lesson Plan Permissions" },
+  { keys: ["Meeting"], label: "Meeting Permissions" },
+  { keys: ["Scholarhip"], label: "Scholarship Permissions" },
+  { keys: ["School"], label: "School Permissions" },
+  { keys: ["Section"], label: "Section Permissions" },
+  { keys: ["Setting"], label: "Setting Permissions" },
+  { keys: ["Student"], label: "Student Permissions" },
+  { keys: ["TimeTable"], label: "Time Table Permissions" },
+  { keys: ["User"], label: "User Permissions" },
+
+  {
+    keys: ["Attendance", "canMarkPresentEmployees"],
+    label: "Attendance Permissions",
+  },
+];

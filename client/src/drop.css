@@ -1,0 +1,80 @@
+/* Dropdown.css */
+.dropdown-container {
+    position: relative;
+    width: 120px;
+    margin: 10px;
+    border-radius: 25%;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+
+  }
+  
+  .dropdown-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .arrow {
+    margin-left: 5px;
+  }
+  
+  .arrow.up {
+    border: solid #000;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(-135deg);
+  }
+  
+  .arrow.down {
+    border: solid #000;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+  }
+  
+  .options-container {
+    position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-height: 200px;
+  overflow-y: auto;
+  /* Hide the options container by default */
+  display: none;
+  /* Set a higher z-index for the open dropdown options container */
+  z-index: 2;
+  }
+  
+  .option {
+    padding: 10px;
+    border-bottom: 1px solid #f0f0f0;
+    cursor: pointer;
+  }
+  
+  .option:last-child {
+    border-bottom: none;
+  }
+  
+  .option:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .option.active {
+    background-color: #007bff;
+    color: #fff;
+  }
+  .dropdown-container.open .options-container {
+    display: block;
+    /* Set an even higher z-index for the open dropdown options container */
+    z-index: 3;
+  }
+  

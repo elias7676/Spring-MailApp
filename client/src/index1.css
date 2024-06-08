@@ -1,0 +1,257 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.container-row {
+  display: flex; /* Use flexbox to arrange containers in a row */
+  justify-content: space-evenly; /* Space evenly between containers */
+  width: 100%; /* Optionally set the width of the row */
+  align-items: center;
+  padding-left: 25px;
+}
+
+.container-2 {
+  background-color: #ffffff;
+  padding-left: 250px;
+  padding: 40px;
+  width: 100px;
+  height: 180px;
+  border-radius: 5%;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+
+  border: 1px solid #e6e6e6; /* Optionally add a border for visual separation */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.inner-container {
+  width: 110px;
+  height: 40px;
+  border: 1px solid rgb(226, 226, 226); /* Optional border for inner containers */
+  margin: 5px; /* Add margin to separate inner containers */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 20%;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+.column-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.containerAppbar {
+  align-items: start;
+  width: 100%;
+  height: 50px;
+  background-color: blue;
+  border-radius: 0%;
+}
+.report-text {
+  color: white;
+  padding-top: 15px;
+  padding-left: 20px;
+  font-size: 16px;
+  font-weight: bold;
+}
+/* DonutChart.css */
+.chart-container {
+  position: relative;
+}
+
+.chart-legend {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.container-3 {
+  border-radius: 2%;
+  height: 280px;
+  width: 250px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+.topstudents {
+  display: flex;
+  justify-content: space-evenly;
+}
+.student-container {
+  border-color: black;
+  border-radius: 0%;
+
+  height: 20;
+
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+
+  width: 150px;
+
+  box-sizing: content-box;
+  padding: 10px;
+}
+
+.Charts {
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  display: flex;
+  align-items: flex-end;
+  padding: 50px;
+
+  &.horizontal {
+    display: block;
+  }
+
+  &.horizontal &--serie {
+    display: block;
+    margin: 0 0 30px 0;
+    border: 0;
+
+    label {
+      position: relative;
+      top: auto;
+      right: auto;
+      left: 0;
+      bottom: auto;
+      padding: 0 0 10px 0;
+    }
+  }
+
+  &--serie {
+    height: 100%;
+    margin: 0 30px 0 0;
+    display: inline-block;
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    transform-origin: 0 100%;
+    animation: slideUp 0.6s;
+    position: relative;
+    border-bottom: 1px solid #c2c2c2;
+
+    &.stacked {
+      display: block;
+    }
+
+    label {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -20px;
+      font-family: Helvetica, sans-serif;
+      font-size: 10px;
+      text-align: center;
+      color: #808080;
+    }
+  }
+
+  &.horizontal &--item {
+    display: block;
+    border-radius: 0 2px 2px 0;
+    margin: 0 0 5px 0;
+    height: 1em;
+
+    b {
+      position: absolute;
+      right: -20px;
+      top: 0.3em;
+    }
+  }
+
+  &--item {
+    background-color: #43a19e;
+    display: inline-block;
+    margin: 0 5px 0 0;
+    flex: 1;
+    transition: height 1s ease-out, width 1s ease-out;
+    position: relative;
+    text-align: center;
+    border-radius: 2px 2px 0 0;
+
+    &.layered {
+      position: absolute;
+      left: 5%;
+      right: 5%;
+      bottom: 0;
+      margin: 0;
+
+      b {
+        position: absolute;
+        right: 0;
+      }
+    }
+
+    &.stacked {
+      position: relative;
+      display: block;
+      border-radius: 0;
+    }
+
+    b {
+      position: relative;
+      font-family: Helvetica, sans-serif;
+      font-size: 10px;
+      top: -20px;
+      color: #43a19e;
+    }
+  }
+}
+
+.Legend {
+  &--color {
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 2px;
+    width: 16px;
+    height: 16px;
+  }
+
+  &--label {
+    display: inline-block;
+    vertical-align: middle;
+    font-family: Helvetica, sans-serif;
+    font-size: 12px;
+    margin: 0 0 0 5px;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+.tab-list {
+  border-bottom: 1px solid #ececec;
+  padding-left: 40%;
+  align-items: center;
+  align-content: space-between;
+  width: 80%;
+  border-left: solid rgb(223, 223, 223);
+}
+
+.tab-list-item {
+  display: inline-block;
+  list-style: none;
+  margin-bottom: -1px;
+  padding: 0.5rem 0.75rem;
+}
+
+.tab-list-active {
+  background-color: white;
+  border: solid #ccc;
+  border-width: 1px 1px 0 1px;
+}
+.report-container {
+  height: 10px;
+}
